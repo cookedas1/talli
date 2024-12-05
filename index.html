@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>탈리 - 타자 연습 게임</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타자 연습 게임 탈리</title>
+  <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1 id="title">탈리</h1>
-        <button id="start-button" class="yellow-button">게임 시작</button>
-
-        <div id="language-options" class="hidden">
-            <button class="blue-button" data-mode="korean">한글 연습</button>
-            <button class="blue-button" data-mode="english">영어 연습</button>
-        </div>
-
-        <div id="practice-options" class="hidden">
-            <button class="green-button" data-type="word">단어 연습</button>
-            <button class="green-button" data-type="paragraph">장문 연습</button>
-            <button class="green-button" data-type="sentence">단문 연습</button>
-        </div>
+  <div id="game-container">
+    <h1>타자 연습 게임 탈리</h1>
+    <button id="word-practice-btn">단어 연습</button>
+    <button id="sentence-practice-btn">단문 연습</button>
+    <button id="paragraph-practice-btn">장문 연습</button>
+    
+    <div id="word-definition"></div>
+    <div id="game-settings">
+      <label for="rounds">라운드 수:</label>
+      <input type="number" id="rounds" value="5" min="1" max="10">
+      <label for="time-limit">게임 시간:</label>
+      <input type="number" id="time-limit" value="60" min="30" max="180">
+      <button id="start-game-btn">게임 시작</button>
     </div>
-    <script src="script.js"></script>
+  </div>
+
+  <script src="src/game.js"></script>
+  <script>
+    // 버튼 이벤트 설정
+    document.getElementById('word-practice-btn').addEventListener('click', () => {
+      // 단어 연습 시작
+      startWordPractice();
+    });
+
+    document.getElementById('start-game-btn').addEventListener('click', () => {
+      // 게임 설정 후 게임 시작
+      rounds = document.getElementById('rounds').value;
+      timeLimit = document.getElementById('time-limit').value;
+      console.log(`게임 시작! 라운드: ${rounds}, 시간: ${timeLimit}`);
+    });
+  </script>
 </body>
 </html>

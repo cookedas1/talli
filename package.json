@@ -1,21 +1,15 @@
 {
     "name": "talli",
     "version": "1.0.0",
-    "description": "taja game talli",
-    "main": "main.js",
+    "description": "Typing game Talli",
+    "main": "src/main.js",
     "scripts": {
-        "start": "electron .",
-        "test": "echo \"Error: no test specified\" && exit 1"
+      "start": "electron ."
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Studio-Moremi/ShopKKuTu.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/cookedas1/talli.git"
-    },
-    "homepage": "https://github.com/cookedas1/talli#readme"
-}
+    "dependencies": {
+      "axios": "^1.3.0",
+      "cheerio": "^1.0.0-rc.12",
+      "electron": "^25.0.0"
+    }
+  }
+  
