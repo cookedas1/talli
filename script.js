@@ -1,23 +1,23 @@
-const words = ['프로젝트', '타자', '연습', '게임', '탈리', '속도', '효율'];
-let currentWord = '';
-let score = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    const startButton = document.getElementById('start-button');
+    const languageOptions = document.getElementById('language-options');
+    const practiceOptions = document.getElementById('practice-options');
 
-const wordElement = document.getElementById('word');
-const inputElement = document.getElementById('input');
-const scoreElement = document.getElementById('score');
+    startButton.addEventListener('click', () => {
+        startButton.classList.add('hidden');
+        languageOptions.classList.remove('hidden');
+    });
 
-function setNewWord() {
-    currentWord = words[Math.floor(Math.random() * words.length)];
-    wordElement.textContent = currentWord;
-    inputElement.value = '';
-}
+    document.querySelectorAll('.blue-button').forEach(button => {
+        button.addEventListener('click', () => {
+            languageOptions.classList.add('hidden');
+            practiceOptions.classList.remove('hidden');
+        });
+    });
 
-inputElement.addEventListener('input', () => {
-    if (inputElement.value === currentWord) {
-        score++;
-        scoreElement.textContent = `점수: ${score}`;
-        setNewWord();
-    }
+    document.querySelectorAll('.green-button').forEach(button => {
+        button.addEventListener('click', () => {
+            alert(`${button.textContent} 모드를 선택하셨습니다.`);
+        });
+    });
 });
-
-setNewWord();

@@ -4,17 +4,18 @@
     "description": "taja game talli",
     "main": "main.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "electron .",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/Studio-Moremi/ShopKKuTu.git"
+        "type": "git",
+        "url": "git+https://github.com/Studio-Moremi/ShopKKuTu.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/Studio-Moremi/ShopKKuTu/issues"
+        "url": "https://github.com/cookedas1/talli.git"
     },
-    "homepage": "https://github.com/Studio-Moremi/ShopKKuTu#readme"
-  }
+    "homepage": "https://github.com/cookedas1/talli#readme"
+}
